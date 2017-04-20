@@ -9,11 +9,11 @@ class String
     #   change = change.-(quarter)
     #   return_change.push(quarter.to_s().concat(" quarters"))
     # end
-    # if change >= 0.10
-    #   dime =change./(0.10)
-    #   change = change.-(dime)
-    #   return_change.push(dime.to_s().concat(" dimes"))
-    # end
+    if change >= 10
+      dime =change./(10)
+      change = change.%(10)
+      return_change.concat(dime.to_s().concat(" dimes "))
+    end
     if change >= 5
       nickle =change./(5)
       change = change.%(5)
