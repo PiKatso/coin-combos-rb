@@ -4,11 +4,11 @@ class String
     return_change = ""
 
 
-    # if change >= 0.25
-    #   quarter =change./(0.25)
-    #   change = change.-(quarter)
-    #   return_change.push(quarter.to_s().concat(" quarters"))
-    # end
+    if change >= 25 
+      quarter =change./(25)
+      change = change.%(25)
+      return_change.concat(quarter.to_s().concat(" quarters "))
+    end
     if change >= 10
       dime =change./(10)
       change = change.%(10)

@@ -14,7 +14,8 @@ describe('String#counter')do
   it("takes under 25 cents value and returns corresponding coin value") do
     expect(("24").counter).to(eq("2 dimes 4 pennies"))
   end
-  # it("takes under 99 cents value and returns corresponding coin value") do
-  #   expect((".99").counter).to(eq("3 quarters 2 dimes 4 pennies"))
-  # end
+
+  it("takes under 99 cents value and returns corresponding coin value") do
+    expect(("99").counter).to(eq("3 quarters 2 dimes 4 pennies"))
+  end
 end
