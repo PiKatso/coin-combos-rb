@@ -7,3 +7,8 @@ require('pry')
 get('/') do
   erb(:index)
 end
+
+get('/result') do
+  @change = params.fetch('number').counter()
+  erb(:result)
+end

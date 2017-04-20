@@ -3,11 +3,11 @@ require('./app')
 Capybara.app = Sinatra::Application
 # set(:show_exceptions, false)
 
-describe('the title case path', {:type => :feature}) do
-  it('processes the user entry and returns it title cased') do
+describe('the change counter path', {:type => :feature}) do
+  it('it takes input number and returnes counter change in least amount of coins') do
     visit('/')
-    fill_in('title', :with => 'green eggs and ham')
+    fill_in('number', :with => '64')
     click_button('Send')
-    expect(page).to have_content('Green Eggs And Ham')
+    expect(page).to have_content('2 quarters 1 dimes 4 pennies')
   end
 end
